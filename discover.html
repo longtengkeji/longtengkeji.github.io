@@ -1,0 +1,62 @@
+<div class="h-full flex flex-col bg-gray-50">
+    <!-- 状态栏 -->
+    <div class="h-12 px-4 flex items-center justify-between text-sm bg-white">
+        <span>9:41</span>
+        <div class="flex gap-1">
+            <i class="fas fa-signal"></i>
+            <i class="fas fa-wifi"></i>
+            <span>100%</span>
+        </div>
+    </div>
+
+    <!-- 内容区 -->
+    <div class="flex-1 overflow-y-auto p-4">
+        <!-- 分类标签 -->
+        <div class="flex gap-2 overflow-x-auto pb-3">
+            <button class="px-4 py-2 bg-blue-500 text-white rounded-full shrink-0">今日热门</button>
+            <button class="px-4 py-2 bg-gray-100 rounded-full shrink-0">科技</button>
+            <button class="px-4 py-2 bg-gray-100 rounded-full shrink-0">文化</button>
+            <button class="px-4 py-2 bg-gray-100 rounded-full shrink-0">商业</button>
+        </div>
+
+        <!-- 推荐瀑布流 -->
+        <div class="grid grid-cols-2 gap-4 mt-4">
+            <!-- 推荐项 -->
+            <div class="bg-white rounded-xl p-3 shadow-sm">
+                <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" 
+                     class="w-full h-40 rounded-lg object-cover">
+                <h3 class="font-semibold mt-2">AI 革命</h3>
+                <p class="text-gray-500 text-sm mt-1">科技洞察 · 45分钟</p>
+                <div class="flex items-center justify-between mt-3">
+                    <button class="text-blue-500">
+                        <i class="fas fa-play"></i>
+                    </button>
+                    <span class="text-gray-400 text-sm">12.3万播放</span>
+                </div>
+            </div>
+            
+            <!-- 更多推荐项... -->
+        </div>
+    </div>
+
+    <!-- 底部导航 -->
+    <div class="h-20 bg-white border-t flex items-center justify-around">
+        <button>
+            <i class="fas fa-home text-xl text-gray-500"></i>
+        </button>
+        <button class="text-blue-500">
+            <i class="fas fa-compass text-xl"></i>
+        </button>
+        <button>
+            <i class="fas fa-play-circle text-xl text-gray-500"></i>
+        </button>
+        <button>
+            <i class="fas fa-bookmark text-xl text-gray-500"></i>
+        </button>
+    </div>
+
+    <!-- 播放控件 -->
+    <div class="absolute bottom-20 left-4 right-4 bg-white rounded-xl shadow-lg p-3">
+        <!-- 播放控件内容与home.html相同 -->
+    </div>
+</div>

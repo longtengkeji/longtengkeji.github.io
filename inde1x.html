@@ -25,10 +25,41 @@
             transform: translateY(80px);
         }
     </style>
+    
 </head>
 <body class="bg-gray-100 p-8">
     <div class="phone-frame mx-auto">
         <iframe src="home.html" class="screen-content" id="mainFrame"></iframe>
     </div>
 </body>
+<!-- 在 index.html 的 body 末尾添加 -->
+<script>
+// 全局播放状态管理
+let playerState = {
+  isPlaying: false,
+  currentTime: 0,
+  duration: 1800
+}
+
+// 切换页面功能
+function switchPage(page) {
+  document.getElementById('mainFrame').src = `${page}.html`;
+}
+
+// 播放器控制
+function togglePlay() {
+  playerState.isPlaying = !playerState.isPlaying;
+  updatePlayerControls();
+}
+
+// 更新所有播放控件
+function updatePlayerControls() {
+  const playButtons = parent.document.querySelectorAll('.play-control');
+  playButtons.forEach(btn => {
+    btn.innerHTML = playerState.isPlaying ? 
+      '<i class="fas fa-pause"></i>' : 
+      '<i class="fas fa-play"></i>';
+  });
+}
+</script>
 </html>

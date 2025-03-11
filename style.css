@@ -1,33 +1,14 @@
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    text-align: center;
-    background: #f4f4f9;
-    color: #333;
+/* 在styles.css中添加 */
+.toggle {
+  @apply relative w-12 h-6 rounded-full bg-gray-200;
 }
-
-header {
-    background: #4CAF50;
-    color: #fff;
-    padding: 20px 0;
+.toggle:checked {
+  @apply bg-blue-500;
 }
-
-section {
-    margin: 20px auto;
-    max-width: 800px;
+.toggle::after {
+  @apply absolute left-0 top-0.5 w-5 h-5 bg-white rounded-full transition-transform;
+  content: '';
 }
-
-img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 50%;
-}
-
-footer {
-    background: #333;
-    color: #fff;
-    padding: 10px 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+.toggle:checked::after {
+  transform: translateX(1.5rem);
 }
